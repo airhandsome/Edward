@@ -17,6 +17,8 @@ menu:
    音乐: /music/ || fas fa-music
    电影: /movies/ || fas fa-video
  留言板: /comments/ || fas fa-envelope-open
+# 说说: /talktalk/ || fas fa-envelop
+# 清单: /checklist/ || fas fa-link
  友链: /link/ || fas fa-link
  关于: /about/ || fas fa-heart
 
@@ -239,6 +241,9 @@ aside:
  card_announcement:
   enable: true
   content: <center> 欢迎来到airhandsome的魔法世界</center>
+ card_friend_link: #友链通讯录
+  enable: true
+  sort_order: # Don't modify the setting unless you know
  card_recent_post:
   enable: false
   limit: 3 # if set 0 will show all
@@ -908,12 +913,25 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
+   - <span id="fps"></span> # 帧率检测
    - <link rel="stylesheet" href="/css/style.css" media="defer" onload="this.media='all'">
    - <link rel="stylesheet" href="/css/universe.css">
+   - <link rel="stylesheet" href="https://cdn1.tianli0.top/npm/element-ui@2.15.6/packages/theme-chalk/lib/index.css">
  # - <link rel="stylesheet" href="/xxx.css">
   bottom:
    - <canvas id="universe"></canvas>
    - <script defer src="/js/universe.js"></script>
+   - <script defer data-pjax src="/js/readPercent.js"></script>
+   - <script defer data-pjax src="/js/emoji.js"></script>
+   - <script async src="https://cdn1.tianli0.top/npm/vue@2.6.14/dist/vue.min.js"></script> # 引入VUE(f12)
+   - <script async src="https://cdn1.tianli0.top/npm/element-ui@2.15.6/lib/index.js"></script> # 引入ElementUI(f12)
+   - <script src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+   - <script defer type="text/javascript" src="https://cdn1.tianli0.top/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script> # 节日弹窗依赖
+   - <script defer src="/js/lunar.js"></script> # 农历计算
+   - <script defer src="/js/day.js"></script> # 节日弹窗
+   - <script async src="/js/fps.js"></script> # 帧率检测
+   - <script type="text/javascript" src="https://cdn1.tianli0.top/npm/jquery@latest/dist/jquery.min.js"></script>
+   - <script async src="/js/title.js"></script>
   # - <script src="xxxx"></script>
 
 # CDN
