@@ -173,10 +173,10 @@ reward:
  enable: true
  coinAudio: https://npm.elemecdn.com/akilar-candyassets@1.0.36/audio/aowu.m4a
  QR_code:
-  - img: https://github.com/airhandsome/Edward/blob/master/newBlog/source/asset/wechat.png
+  - img: https://image-bed-alpha.vercel.app/img/wechat.png
     link:
     text: 微信
-  - img: https://github.com/airhandsome/Edward/blob/master/newBlog/source/asset/zhifubao.png
+  - img: https://image-bed-alpha.vercel.app/img/zhifubao.png
     link:
     text: 支付宝
 
