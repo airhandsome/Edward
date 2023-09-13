@@ -11,9 +11,9 @@
 - class_name: 2.友情链接
   class_desc: 一些好朋友~~
   link_list:
-    - name: Fomalhaut🥝
+    - name: airhandsome
       offline: true
-      link: https://fomal.cc/
-      avatar: /assets/head.jpg
+      link: https://github.com/airhandsome
+      avatar: /assets/head.jpeg
       descr: Future is now 🍭🍭🍭
       siteshot: https://source.fomal.cc/siteshot/www.fomal.cn.jpg
