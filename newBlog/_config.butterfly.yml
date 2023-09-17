@@ -37,11 +37,10 @@ code_word_wrap: false
 # formal:
 #   icon: link || the description || color
 social:
-  微信: /assets/QRCode.jpg || icon-weixin || faa-tada
-  QQ: https://res.abeim.cn/api/qq/?qq=278391547 || icon-QQ || faa-tada
-  QQ邮箱: mailto:278391547@qq.com || icon-youxiang || faa-tada
-# fab fa-github: https://github.com/xxxxx || Github || '#24292e'
-# fas fa-envelope: mailto:xxxxxx@gmail.com || Email || '#4a7dbe'
+  微信: /assets/QRCode.jpg || fa-brands fa-weixin || '#24292e'
+  QQ: https://res.abeim.cn/api/qq/?qq=278391547 || fa-brands fa-qq || '#24292e'
+  QQ邮箱: mailto:278391547@qq.com || fa-regular fa-envelope || '#24292e'
+  fab fa-github: https://github.com/airhandsome || fa-brands fa-github || '#24292e'
 
 # Image (圖片設置)
 # --------------------------------------
@@ -51,7 +50,7 @@ favicon: /img/favicon.png
 
 # Avatar (頭像)
 avatar:
-  img: https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png
+  img: https://image-bed-alpha.vercel.app/img/20230914215504.png
   effect: false
 
 # Disable all banner image
@@ -237,7 +236,7 @@ aside:
   description:
   button:
    enable: true
-   icon: # fab fa-github
+   icon: fab fa-github
    text: 通向魔法仓库...
    link: https://github.com/airhandsome
  card_announcement:
@@ -917,6 +916,7 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
+   - <link rel="stylesheet" href="/css/iconfont.css">
    - <span id="fps"></span> # 帧率检测
    - <link rel="stylesheet" href="/css/style.css" media="defer" onload="this.media='all'">
    - <link rel="stylesheet" href="/css/universe.css">
@@ -1018,23 +1018,6 @@ CDN:
   # busuanzi:
   # abcjs_basic_js:
 
-footer_beautify:
- enable:
-  timer: true # 计时器开关
-  bdage: true # 徽标开关
- priority: 5 #过滤器优先权
- enable_page: all # 应用页面
- exclude: #屏蔽页面
- # - /posts/
- # - /about/
- layout: # 挂载容器类型
-  type: id
-  name: footer-wrap
-  index: 0
- # 计时器部分配置项（看你喜欢哪个，最好下载下来放到自己的项目中不然会增加我网站的负载）
- # 这是我的
- runtime_js: /js/runtime.js
- runtime_css: https://www.fomal.cc/static/css/runtime.min.css
 
 
 wowjs:

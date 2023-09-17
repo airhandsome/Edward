@@ -1,4 +1,3 @@
-// 如果当前页有评论就执行函数
 if (document.getElementById('post-comment')) owoBig();
 // 表情放大
 function owoBig() {
@@ -446,7 +445,7 @@ function indexTalk() {
     if (d) talk(d);
     else {
         // memos1.4.0以上版本请在下面的/api/后面加上v1，即/api/v1/memo?creatorId=1&tag=说说&limit=30
-        fetch('https://你的memos地址/api/memo?creatorId=用户ID&tag=说说&limit=10').then(res => res.json()).then(data => { // 更改地址和ID
+        fetch('http://www.notcloud.cn:5230/api/v1/memo?openId=d3eb350b-d1bf-4d56-836b-34b98a81ab99?creatorId=airhandsome&limit=10').then(res => res.json()).then(data => { // 更改地址和ID
             // memos1.4.0以上版本请删除掉下面的一个data，即data = toText(data)
             data = toText(data.data)
             talk(data);
@@ -463,3 +462,30 @@ indexTalk();
 
 // whenDOMReady()
 // document.addEventListener("pjax:complete", whenDOMReady)
+
+// 切换自定义颜色
+var defineColor = localStorage.getItem("blogbg") && localStorage.getItem("blogbg").charAt(0) == '#' ? localStorage.getItem("blogbg") : '#F4D88A';
+function changeBgColor() {
+    changeBg(document.querySelector("#define_colors").value);
+}
+
+// 必应每日壁纸API
+let bingDayBg = screen.width <= 768 ? "url(https://bing.img.run/m.php)" : "url(https://bing.img.run/1920x1080.php)";
+// 必应历史壁纸API
+let bingHistoryBg = screen.width <= 768 ? "url(https://bing.img.run/rand_m.php)" : "url(https://bing.img.run/rand.php)";
+// EEE.DOG
+let EEEDog = "url(https://api.yimian.xyz/img?type=moe&size=1920x1080)";
+// 随机美图cdn.seovx.com
+let seovx = "url(https://cdn.seovx.com/?mom=302)";
+// picsum随机
+let picsum = "url(https://picsum.photos/1920/1080.webp)";
+// 小歪二次元
+// let waiDongman = "url(https://api.ixiaowai.cn/api/api.php)";
+//  小歪高清壁纸
+let waiBizhi = "url(https://api.ixiaowai.cn/gqapi/gqapi.php)";
+// 博天随机
+let btstu = "url(http://api.btstu.cn/sjbz/?lx=suiji)";
+// tuapi 动漫
+// let tuapi = "url(https://tuapi.eees.cc/api.php?category=dongman)";
+// unsplash随机 https://source.unsplash.com/random/1920x1080/daily (weekly)
+let unsplash = "url(https://source.unsplash.com/random/1920x1080/)";

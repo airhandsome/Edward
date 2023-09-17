@@ -7,7 +7,7 @@ date: 2023-09-13 22:39:24
 <script>
     let UserConfig = {
         // 填写你的api地址
-        private_api_url: 'http://47.116.116.142:1234/',
+        private_api_url: 'http://www.notcloud.cn:1234/',
         // 点击加载更多时，一次最多加载几篇文章，默认10
         page_turning_number: 12,
         // 头像加载失败时，默认头像地址
